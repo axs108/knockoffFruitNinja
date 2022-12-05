@@ -15,23 +15,25 @@ let n = makeNoise3D();
  * @returns The RGB color to display at the x,y location at time t
  */
 function shade(x, y, t) {
-    //❓❓ Question 2
-    //❓❓ Question 3
-    //❓❓ Question 4
+    let w = hs1(.66, 1, .3 + .15 *(Math.sin((t / 3 -2 8 y + n(x * 3, 0, t/10)/20))))
     return [x,y,Math.sin(t)];
 }
+if (Math.pow(1 - Math.abs(.39 - x)+(y - .2) * .1, 5) > .9) {
+    let s=hs1(y / 2 - .4, 1, .3);
+    if (Math.pow(1- Math.abs(.39 - x)+ (y - .2)* .1, 5)> .9){
+        s= hs1(.15, 1, .7);
+    }
+}
 
-/**
- * I call this draw function 30 times per second.
- * @param ctx - The 2d drawing context
- * @param t -The time in seconds
- */
 function draw(ctx, t) {
+    function circle(x,y,r){
+        ctx.beginPath();
+    }
     //See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D
     ctx.lineWidth = 2;
     ctx.strokeStyle = 'black';
-    //❓❓ Question 5
-    //❓❓ Question 6
+    //ââ Question 5
+    //ââ Question 6
     ctx.strokeRect(75, 100, 150 + 10 * Math.sin(t), 100 + 10 *Math.cos(t));
 }
 
